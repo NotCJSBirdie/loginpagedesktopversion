@@ -1,0 +1,77 @@
+.signinpage {
+	background-color: #f9f9f9;
+	padding: 30px;
+	margin-left: 330px;
+	margin-right: 330px;
+}
+
+.logintitle {
+	text-align: center;
+}
+
+.logininput {
+	width: 100%;
+	font-family: "Inter", sans-serif;
+}
+
+.loginbutton1 {
+	text-align: center;
+	font-family: "Manrope", sans-serif;
+}
+
+.loginbuttonself {
+	background-color: #004194;
+}
+
+.bottomlogintext {
+	text-align: center;
+}
+
+.googlebutton {
+	text-align: right;
+}
+
+.margininput1 {
+	margin: 20px;
+	font-family: "Inter", sans-serif;
+}
+
+.margininput2 {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-family: "Inter", sans-serif;
+}
+
+.margininput3 {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.rightpartblue {
+	color: #004194;
+	font-family: "Inter", sans-serif;
+}
+
+.logintitleword {
+	font-family: "Manrope", sans-serif;
+}
+
+.buttontext {
+	font-family: "Manrope", sans-serif;
+	font-size: 20px;
+}
+
+.rightpartword {
+	font-family: "Inter", sans-serif;
+}
+
+.dividerp {
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+}
+
+.buttonmargin {
+	margin-left: 10px;
+	margin-right: 10px;
+}

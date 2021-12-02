@@ -1,13 +1,56 @@
 .orderpic {
 	width: 100%;
+	margin: 10px;
+}
+
+.rightstack {
+	margin: 10px;
 }
 
 .firstrightrow {
 	border-bottom: 1px;
-	border-bottom-color: black;
+	border-bottom-color: #0a35561a;
 	border-bottom-style: solid;
 }
 
 .rightcolumn {
 	padding: 10px;
+}
+
+.rightlabelpart1 {
+	font-family: "Inter", sans-serif;
+}
+
+.rightlabelpart2 {
+	font-family: "Manrope", sans-serif;
+}
+
+.rightcontainer {
+}
+
+.rightrow {
+	margin: 10px;
+	background-color: #f9f9f9;
+}
+
+.righttitle {
+	font-family: "Manrope", sans-serif;
+}
+
+.rightsubtitle {
+	font-family: "Manrope", sans-serif;
+}
+
+.lastleftpart {
+	font-family: "Manrope", sans-serif;
+}
+
+.lastrightpart {
+	font-family: "Manrope", sans-serif;
+}
+
+.lastrightrow {
+	border-top: 1px;
+	border-top-color: #0a35561a;
+	border-top-style: solid;
 }

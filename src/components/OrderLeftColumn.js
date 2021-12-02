@@ -14,7 +14,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import Box from "@mui/material/Box";
-import "./OrderRightColumn.css";
 import Pic31 from "./assets/pic31.png";
 import Pic32 from "./assets/pic32.png";
 import Pic33 from "./assets/pic33.png";
@@ -31,19 +30,18 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import InputLabel from "@mui/material/InputLabel";
+import OrderPageLogo from "./assets/orderpagelogo.png";
 
 function OrderLeftColumn() {
-	const [anchorEl, setAnchorEl] = React.useState(null);
-	const open = Boolean(anchorEl);
-	const handleClick = (event) => {
-		setAnchorEl(event.currentTarget);
+	const [age, setAge] = React.useState("");
+
+	const handleChange = (event) => {
+		setAge(event.target.value);
 	};
-	const handleClose = () => {
-		setAnchorEl(null);
-	};
+
 	return (
 		<div>
-			<h1>OrderLeftColumn</h1>
 			<List
 				sx={{
 					width: "100%",
@@ -52,140 +50,296 @@ function OrderLeftColumn() {
 					bgcolor: "#FFFFFF",
 					boxShadow: 7,
 				}}
-				className="rightcolumn"
+				className="leftcolumn"
 			>
 				<Form>
-					<Form.Label>Информация о получателе</Form.Label>
-					<Row className="mb-3">
-						<Form.Group as={Col} controlId="formGridEmail">
+					<Box className="label">
+						<Form.Label>
+							<strong>Информация о получателе</strong>
+						</Form.Label>
+					</Box>
+
+					<Box className="input">
+						<Row className="mb-3">
+							<Form.Group as={Col} controlId="formGridEmail">
+								<Form.Control
+									type="email"
+									placeholder="Имя"
+									className="textbox"
+								/>
+							</Form.Group>
+
+							<Form.Group as={Col} controlId="formGridPassword">
+								<Form.Control
+									type="password"
+									placeholder="Фамилия"
+									className="textbox"
+								/>
+							</Form.Group>
+						</Row>
+					</Box>
+
+					<Box className="input">
+						<Form.Group
+							className="mb-3"
+							controlId="formGridAddress1"
+						>
 							<Form.Control
-								type="email"
-								placeholder="Enter email"
+								placeholder="Номер телефона"
+								className="textbox"
 							/>
 						</Form.Group>
+					</Box>
 
-						<Form.Group as={Col} controlId="formGridPassword">
+					<Box className="input">
+						<Form.Group
+							className="mb-3"
+							controlId="formGridAddress1"
+						>
 							<Form.Control
-								type="password"
-								placeholder="Password"
+								placeholder="Email"
+								className="textbox"
 							/>
 						</Form.Group>
-					</Row>
+					</Box>
 
-					<Form.Group className="mb-3" controlId="formGridAddress1">
-						<Form.Control placeholder="Address" />
-					</Form.Group>
-					<Form.Group className="mb-3" controlId="formGridAddress1">
-						<Form.Control placeholder="Email" />
-					</Form.Group>
-					<Form.Label>Способ доставки</Form.Label>
+					<Box className="label">
+						<Form.Label>
+							<strong>Способ доставки</strong>
+						</Form.Label>
+					</Box>
 
-					<div className="d-grid gap-2">
-						<Button variant="light" size="lg">
-							<Navbar className="firstrightrow">
-								<Container>
-									<Navbar.Brand>
-										<Navbar.Text>
-											<a href="#login">Icon</a>
-										</Navbar.Text>
-									</Navbar.Brand>
-									<Navbar.Brand>
-										<Navbar.Text>
+					<Box sx={{ minWidth: 120 }} className="dropdownofficial">
+						<FormControl fullWidth className="dropdownbg">
+							<InputLabel id="demo-simple-select-label">
+								<Container className="fontofdropdown">
+									<Row>
+										<Col>
+											<img
+												alt=""
+												src={OrderPageLogo}
+												className="orderpagelogo"
+											/>
+										</Col>
+										<Col>
 											<Stack>
-												<a href="#login">
-													Самовывоз с "Укрпошта"
-												</a>
-												<a href="#login">бесплатно</a>
+												<div>
+													<strong>
+														Самовывоз с "Укрпошта"
+													</strong>
+												</div>
+												<div>бесплатно</div>
 											</Stack>
-										</Navbar.Text>
-									</Navbar.Brand>
-									<Navbar.Toggle />
-									<Navbar.Collapse className="justify-content-end">
-										<Navbar.Text>
-											<a href="#login">></a>
-										</Navbar.Text>
-									</Navbar.Collapse>
+										</Col>
+									</Row>
 								</Container>
-							</Navbar>
-						</Button>
-						<Button variant="light" size="lg">
-							<Navbar className="firstrightrow">
-								<Container>
-									<Navbar.Brand>
-										<Navbar.Text>
-											<a href="#login">Город</a>
-										</Navbar.Text>
-									</Navbar.Brand>
-									<Navbar.Toggle />
-									<Navbar.Collapse className="justify-content-end">
-										<Navbar.Text>
-											<a href="#login">></a>
-										</Navbar.Text>
-									</Navbar.Collapse>
-								</Container>
-							</Navbar>
-						</Button>
-						<Button variant="light" size="lg">
-							<Navbar className="firstrightrow">
-								<Container>
-									<Navbar.Brand>
-										<Navbar.Text>
-											<a href="#login">Отделение</a>
-										</Navbar.Text>
-									</Navbar.Brand>
-									<Navbar.Toggle />
-									<Navbar.Collapse className="justify-content-end">
-										<Navbar.Text>
-											<a href="#login">></a>
-										</Navbar.Text>
-									</Navbar.Collapse>
-								</Container>
-							</Navbar>
-						</Button>
-					</div>
+							</InputLabel>
 
-					<Form.Label>Способ оплаты</Form.Label>
-				</Form>
+							<Select
+								labelId="demo-simple-select-label"
+								id="demo-simple-select"
+								value={age}
+								label="Age"
+								onChange={handleChange}
+								className="dropdownheight"
+							>
+								<MenuItem value={10}></MenuItem>
+								<MenuItem value={20}></MenuItem>
+								<MenuItem value={30}></MenuItem>
+							</Select>
+						</FormControl>
+					</Box>
 
-				<Button2
-					id="basic-button"
-					aria-controls="basic-menu"
-					aria-haspopup="true"
-					aria-expanded={open ? "true" : undefined}
-					onClick={handleClick}
-					sx={{ width: 600 }}
-				>
-					<Navbar className="firstrightrow">
+					<Box sx={{ minWidth: 120 }} className="dropdownofficial">
+						<FormControl fullWidth className="dropdownbg">
+							<InputLabel id="demo-simple-select-label">
+								<Container className="fontofdropdown">
+									Город
+								</Container>
+							</InputLabel>
+							<Select
+								labelId="demo-simple-select-label"
+								id="demo-simple-select"
+								value={age}
+								label="Age"
+								onChange={handleChange}
+							>
+								<MenuItem value={10}></MenuItem>
+								<MenuItem value={20}></MenuItem>
+								<MenuItem value={30}></MenuItem>
+							</Select>
+						</FormControl>
+					</Box>
+
+					<Box sx={{ minWidth: 120 }} className="dropdownofficial">
+						<FormControl fullWidth className="dropdownbg">
+							<InputLabel id="demo-simple-select-label">
+								<Container className="fontofdropdown">
+									Отделение
+								</Container>
+							</InputLabel>
+							<Select
+								labelId="demo-simple-select-label"
+								id="demo-simple-select"
+								value={age}
+								label="Age"
+								onChange={handleChange}
+							>
+								<MenuItem value={10}></MenuItem>
+								<MenuItem value={20}></MenuItem>
+								<MenuItem value={30}></MenuItem>
+							</Select>
+						</FormControl>
+					</Box>
+
+					<Box className="label">
+						<Form.Label>
+							<strong>Способ оплаты</strong>
+						</Form.Label>
+					</Box>
+
+					<Box sx={{ minWidth: 120 }} className="dropdownofficial">
+						<FormControl fullWidth className="dropdownbg">
+							<InputLabel id="demo-simple-select-label">
+								<Container className="fontofdropdown">
+									<Row>
+										<Col>
+											<Stack>
+												<div>
+													<strong>
+														Наложеныый платёж
+													</strong>
+												</div>
+												<div>
+													оплата при получении в
+													отделении почты
+												</div>
+											</Stack>
+										</Col>
+									</Row>
+								</Container>
+							</InputLabel>
+							<Select
+								labelId="demo-simple-select-label"
+								id="demo-simple-select"
+								value={age}
+								label="Age"
+								onChange={handleChange}
+								className="dropdownheight"
+							>
+								<MenuItem value={10}>
+									<Container className="fontofdropdown">
+										<Row>
+											<Col>
+												<Stack>
+													<div>
+														<strong>
+															Оплата на карту
+														</strong>
+													</div>
+													<div>
+														полная оплата на карту
+													</div>
+												</Stack>
+											</Col>
+										</Row>
+									</Container>
+								</MenuItem>
+								<MenuItem value={20}>
+									<Container className="fontofdropdown">
+										<Row>
+											<Col>
+												<Stack>
+													<div>
+														<strong>
+															Предоплата на карту
+														</strong>
+													</div>
+													<div>
+														половина суммы заказа в
+														начале - половина в
+														конце
+													</div>
+												</Stack>
+											</Col>
+										</Row>
+									</Container>
+								</MenuItem>
+								<MenuItem value={30}>
+									<Container className="fontofdropdown">
+										<Row>
+											<Col>
+												<Stack>
+													<div>
+														<strong>
+															Наложеныый платёж
+														</strong>
+													</div>
+													<div>
+														оплата при получении в
+														отделении почты
+													</div>
+												</Stack>
+											</Col>
+										</Row>
+									</Container>
+								</MenuItem>
+							</Select>
+						</FormControl>
+					</Box>
+
+					<Form.Label className="label">
+						<strong>Коментарий к заказу</strong>
+					</Form.Label>
+
+					<Form.Group
+						controlId="formBasicEmail"
+						className="commentarea"
+					>
+						<Form.Control
+							as="textarea"
+							rows={7}
+							placeholder="Уточнение к заказу"
+							className="commentbg"
+						/>
+					</Form.Group>
+
+					<Navbar>
 						<Container>
 							<Navbar.Brand>
-								<Navbar.Text>
-									<a href="#login">Отделение</a>
+								<Navbar.Text className="leftpart">
+									<h2>
+										<strong>К оплате</strong>
+									</h2>
 								</Navbar.Text>
 							</Navbar.Brand>
 							<Navbar.Toggle />
-							<Box sx={{ mr: 55 }}></Box>
-
 							<Navbar.Collapse className="justify-content-end">
-								<Navbar.Text>
-									<a href="#login">></a>
+								<Navbar.Text className="rightpart">
+									<h2>
+										<strong>19300</strong>
+									</h2>
+								</Navbar.Text>
+								<Navbar.Text className="rightpart">
+									<h4>
+										<strong>₴</strong>
+									</h4>
 								</Navbar.Text>
 							</Navbar.Collapse>
 						</Container>
 					</Navbar>
-				</Button2>
-				<Menu
-					id="basic-menu"
-					anchorEl={anchorEl}
-					open={open}
-					onClose={handleClose}
-					MenuListProps={{
-						"aria-labelledby": "basic-button",
-					}}
-				>
-					<MenuItem onClick={handleClose}>Profile</MenuItem>
-					<MenuItem onClick={handleClose}>My account</MenuItem>
-					<MenuItem onClick={handleClose}>Logout</MenuItem>
-				</Menu>
+					<Box className="blockbutton">
+						<div className="d-grid gap-2">
+							<Button
+								variant="primary"
+								size="lg"
+								className="buttonbg"
+							>
+								Оформить заказ
+							</Button>
+						</div>
+					</Box>
+				</Form>
 			</List>
 		</div>
 	);

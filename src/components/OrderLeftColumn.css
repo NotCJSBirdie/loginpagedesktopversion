@@ -12,3 +12,71 @@
 .dropdown-menu {
 	width: 100%;
 }
+
+.commentsection {
+	height: 450px;
+}
+
+.dropdownofficial {
+	padding: 20px;
+	font-family: "Inter", sans-serif;
+}
+
+.commentarea {
+	padding: 20px;
+}
+
+.commentbg {
+	background-color: #f9f9f9;
+}
+
+.blockbutton {
+	padding: 20px;
+}
+
+.label {
+	padding: 20px;
+	font-family: "Inter", sans-serif;
+}
+
+.input {
+	padding-left: 10px;
+	padding-right: 20px;
+	font-family: "Inter", sans-serif;
+	/*background-color: #f9f9f9;*/
+}
+
+.textbox {
+	background-color: #f9f9f9;
+}
+
+.dropdownheight {
+	height: 80px;
+}
+
+.orderpagelogo {
+	width: 20px;
+	height: 20px;
+}
+
+.fontofdropdown {
+	font-family: "Inter", sans-serif;
+}
+
+.dropdownbg {
+	background-color: #f9f9f9;
+}
+
+.leftpart {
+	font-family: "Manrope", sans-serif;
+	font-weight: 600;
+	color: #000000;
+}
+
+.rightpart {
+	font-family: "Inter", sans-serif;
+}
+
+.buttonbg {
+	background-color: #004194;
+}

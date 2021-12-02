@@ -23,12 +23,11 @@ import Stack from "react-bootstrap/Stack";
 function OrderRightColumn() {
 	return (
 		<div>
-			<h1>Right Column</h1>
 			<List
 				sx={{
 					width: "100%",
 					height: "100%",
-					maxWidth: 360,
+					maxWidth: 500,
 					bgcolor: "#FFFFFF",
 					boxShadow: 7,
 				}}
@@ -37,92 +36,111 @@ function OrderRightColumn() {
 				<Navbar className="firstrightrow">
 					<Container>
 						<Navbar.Brand>
-							<Navbar.Text>
-								<a href="#login">Ваш заказ</a>
+							<Navbar.Text className="rightlabelpart1">
+								Ваш заказ
 							</Navbar.Text>
 						</Navbar.Brand>
 						<Navbar.Toggle />
 						<Navbar.Collapse className="justify-content-end">
-							<Navbar.Text>
-								<a href="#login">Изменить</a>
+							<Navbar.Text className="rightlabelpart2">
+								Изменить
 							</Navbar.Text>
 						</Navbar.Collapse>
 					</Container>
 				</Navbar>
-				<Container fluid>
-					<Row>
+
+				<Box sx={{ mb: 5 }}></Box>
+
+				<Container fluid className="rightcontainer">
+					<Row className="rightrow">
 						<Col xs={5}>
 							<img alt="" src={Pic31} className="orderpic" />
 						</Col>
 						<Col xs={7}>
-							<Stack>
-								<div className="bg-light border">
-									Аналоговый 4-дюймовый видеодомофон с
-									сенсорными кнопками Slinex SQ-04 Black{" "}
+							<Stack className="rightstack">
+								<div className="righttitle">
+									<strong>
+										Аналоговый 4-дюймовый видеодомофон с
+										сенсорными кнопками Slinex SQ-04 Black
+									</strong>
 								</div>
-								<div className="bg-light border">
-									Цена: 7000₴
+								<Box sx={{ mb: 1 }}></Box>
+								<div className="rightsubtitle">
+									<h6>Цена: 7000₴</h6>
 								</div>
-								<div className="bg-light border">
-									Количество: 1 шт.
+								<div className="rightsubtitle">
+									<h6>Количество: 1 шт.</h6>
 								</div>
 							</Stack>
 						</Col>
 					</Row>
 				</Container>
-				<Container fluid>
-					<Row>
+
+				<Container fluid className="rightcontainer">
+					<Row className="rightrow">
 						<Col xs={5}>
 							<img alt="" src={Pic32} className="orderpic" />
 						</Col>
 						<Col xs={7}>
-							<Stack>
-								<div className="bg-light border">
-									Аналоговый 4-дюймовый видеодомофон с
-									сенсорными кнопками Slinex SQ-04 Black{" "}
+							<Stack className="rightstack">
+								<div className="righttitle">
+									<strong>
+										Аналоговый 4-дюймовый видеодомофон с
+										сенсорными кнопками Slinex SQ-04 Black
+									</strong>
 								</div>
-								<div className="bg-light border">
-									Цена: 7000₴
+								<Box sx={{ mb: 1 }}></Box>
+								<div className="rightsubtitle">
+									<h6>Цена: 7000₴</h6>
 								</div>
-								<div className="bg-light border">
-									Количество: 1 шт.
+								<div className="rightsubtitle">
+									<h6>Количество: 1 шт.</h6>
 								</div>
 							</Stack>
 						</Col>
 					</Row>
 				</Container>
-				<Container fluid>
-					<Row>
+
+				<Container fluid className="rightcontainer">
+					<Row className="rightrow">
 						<Col xs={5}>
 							<img alt="" src={Pic33} className="orderpic" />
 						</Col>
 						<Col xs={7}>
-							<Stack>
-								<div className="bg-light border">
-									Аналоговый 4-дюймовый видеодомофон с
-									сенсорными кнопками Slinex SQ-04 Black{" "}
+							<Stack className="rightstack">
+								<div className="righttitle">
+									<strong>
+										Аналоговый 4-дюймовый видеодомофон с
+										сенсорными кнопками Slinex SQ-04 Black
+									</strong>
 								</div>
-								<div className="bg-light border">
-									Цена: 7000₴
+								<Box sx={{ mb: 1 }}></Box>
+								<div className="rightsubtitle">
+									<h6>Цена: 7000₴</h6>
 								</div>
-								<div className="bg-light border">
-									Количество: 1 шт.
+								<div className="rightsubtitle">
+									<h6>Количество: 1 шт.</h6>
 								</div>
 							</Stack>
 						</Col>
 					</Row>
 				</Container>
-				<Navbar className="firstrightrow">
+
+				<Navbar className="lastrightrow">
 					<Container>
 						<Navbar.Brand>
-							<Navbar.Text>
-								<a href="#login">К оплате</a>
+							<Navbar.Text className="lastleftpart">
+								<h4>
+									<strong>К оплате</strong>
+								</h4>
 							</Navbar.Text>
 						</Navbar.Brand>
 						<Navbar.Toggle />
 						<Navbar.Collapse className="justify-content-end">
-							<Navbar.Text>
-								<a href="#login">19300₴</a>
+							<Navbar.Text className="lastrightpart">
+								<h4>
+									<strong>19300₴</strong>
+								</h4>
 							</Navbar.Text>
 						</Navbar.Collapse>
 					</Container>
