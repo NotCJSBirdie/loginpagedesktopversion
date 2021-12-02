@@ -10,7 +10,7 @@ import SignInWholePage from "./SignInWholePage.js";
 
 ReactDOM.render(
   <React.StrictMode>
-    <SignInWholePage />
+    <LoginPageWhole />
   </React.StrictMode>,
   document.getElementById("root")
 );
